@@ -8,9 +8,7 @@ import privateInfrastructureImg from "@assets/multi llm.png";
 import multiModalImg from "@assets/audio.png";
 import enterpriseRagImg from "@assets/ingestion.png";
 import agenticImg from "@assets/workflow.png";
-import securityImg from "@assets/image_1744190144319.png";
-import analyticsImg from "@assets/image_1744190443027.png";
-import accessImg from "@assets/image_1744259767870.png";
+import accessImg from "@assets/image_1744267121230.png"; // Updated to the new chat image
 
 interface Feature {
   id: string;
@@ -24,10 +22,10 @@ interface Feature {
 const features: Feature[] = [
   {
     id: "private-infrastructure",
-    title: "Enterprise Integrations",
-    description: "Integrate with Microsoft 365, SharePoint, Zoom, Zapier, and more.",
+    title: "Enterprise App Integrations",
+    description: "Connect ReN3.AI to your favorite tools for seamless automation and data flow across platforms.",
     image: privateInfrastructureImg,
-    altText: "Ren3 enterprise integrations with multiple platforms"
+    altText: "Ren3 multi-model intelligence capabilities"
   },
   {
     id: "multi-modal",
@@ -51,23 +49,16 @@ const features: Feature[] = [
     altText: "Ren3 agentic workflow creation interface"
   },
   {
-    id: "security",
-    title: "AI Deployment Beyond LLM Limitations",
-    description: "Deploy an AI strategy that safely solves LLM and LAM inadequacies.",
-    image: securityImg,
-    altText: "Ren3 AI deployment beyond LLM limitations"
-  },
-  {
     id: "access",
-    title: "AI Access for Everyone",
-    description: "Boost AI access via Teams chat, voice, and avatars.",
+    title: "Conversational AI Access",
+    description: "Interact with your data using chat, voice, or avatars across tools and platforms.",
     image: accessImg,
-    altText: "Ren3 AI access features for team collaboration"
+    altText: "Ren3 AI chat interface showing content queries"
   }
 ];
 
 const Ren3FeatureShowcase = () => {
-  const [activeFeature, setActiveFeature] = useState<string>("access");
+  const [activeFeature, setActiveFeature] = useState<string>("private-infrastructure");
   const currentFeature = features.find(feature => feature.id === activeFeature);
   
   return (
@@ -157,29 +148,14 @@ const Ren3FeatureShowcase = () => {
                     className="relative z-10 p-4 w-full h-full flex items-center justify-center"
                   >
                     <div className="relative rounded-lg overflow-hidden shadow-xl w-full max-h-[95%] transition-all duration-300">
-                      {/* Display video for AI Access feature, images for others */}
-                      {currentFeature.id === "access" ? (
-                        <div className="bg-gray-900 p-0">
-                          <video 
-                            key={`video-${currentFeature.id}`}
-                            src="/access-video.mp4"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="max-w-full max-h-[350px] object-contain mx-auto"
-                            onError={(e) => console.error("Video error:", e)}
-                          />
-                        </div>
-                      ) : (
-                        <div className="bg-white p-6">
-                          <img 
-                            src={currentFeature.image} 
-                            alt={currentFeature.altText} 
-                            className="max-w-full max-h-[350px] object-contain mx-auto"
-                          />
-                        </div>
-                      )}
+                      {/* Just use the imported image for all features */}
+                      <div className="bg-white p-6">
+                        <img 
+                          src={currentFeature.image} 
+                          alt={currentFeature.altText} 
+                          className="max-w-full max-h-[350px] object-contain mx-auto"
+                        />
+                      </div>
                       
                       {/* Ren3 logo watermark */}
                       <div className="absolute bottom-2 right-3 text-gray-400 font-bold text-xs">

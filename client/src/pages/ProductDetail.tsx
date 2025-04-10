@@ -289,17 +289,7 @@ const ProductDetail = () => {
                             />
                           )}
                           
-                          {/* Feature Description for Ren3 */}
-                          {product.id === "ren3" && (
-                            <p className="text-gray-500 text-sm max-w-md">
-                              {/* Removed duplicate features that are shown in Ren3FeatureShowcase */}
-                              {index === 0 ? "Deploy securely on your premises or in cloud environments of your choice." : 
-                               index === 1 ? "Control your AI infrastructure and governance with full transparency." :
-                               index === 2 ? "Lower training and user adoption costs with intuitive interfaces." :
-                               index === 3 ? "Scale resources on-demand to meet fluctuating business requirements." :
-                               "Custom-designed solutions to match your organization's unique needs."}
-                            </p>
-                          )}
+                          {/* Removed feature descriptions as requested */}
                         </div>
                       </motion.div>
                     ))}
