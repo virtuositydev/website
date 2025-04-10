@@ -58,7 +58,7 @@ const features: Feature[] = [
 ];
 
 const Ren3FeatureShowcase = () => {
-  const [activeFeature, setActiveFeature] = useState<string>("private-infrastructure");
+  const [activeFeature, setActiveFeature] = useState<string>("access");
   const currentFeature = features.find(feature => feature.id === activeFeature);
   
   return (

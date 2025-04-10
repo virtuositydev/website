@@ -187,11 +187,11 @@ const ProductDetail = () => {
       {product.id === "ren3" && <Ren3FeatureShowcase />}
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+      <section className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {/* Key Features */}
-            <div className="mb-12">
+            <div className="mb-8 md:mb-12">
               <motion.div 
                 className="text-center relative"
                 initial={{ opacity: 0 }}
@@ -208,16 +208,16 @@ const ProductDetail = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                   >
-                    <div className="text-[200px] md:text-[350px] font-bold tracking-tight text-gray-800">R3</div>
+                    <div className="text-[120px] sm:text-[200px] md:text-[350px] font-bold tracking-tight text-gray-800">R3</div>
                   </motion.div>
                 )}
                 
                 {/* Section Title */}
-                <h2 className="text-3xl md:text-5xl font-bold mb-3 relative inline-block">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 md:mb-3 relative inline-block">
                   Key Features
                   {product.id === "ren3" && (
                     <motion.div 
-                      className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-gray-800/80 to-gray-500/20"
+                      className="absolute -bottom-1 md:-bottom-2 left-0 h-1 bg-gradient-to-r from-gray-800/80 to-gray-500/20"
                       initial={{ width: 0 }}
                       whileInView={{ width: "100%" }}
                       viewport={{ once: true }}
@@ -227,17 +227,17 @@ const ProductDetail = () => {
                 </h2>
                 
                 {/* Section Description */}
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-16 mt-6">
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 md:mb-16 mt-4 md:mt-6 px-2">
                   Discover the powerful capabilities of {product.title}
                 </p>
 
                 {/* Feature Cards */}
                 {product.features && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-4 md:mt-8">
                     {product.features.map((feature, index) => (
                       <motion.div
                         key={index}
-                        className={`flex items-start p-6 rounded-xl ${
+                        className={`flex items-start p-4 md:p-6 rounded-lg md:rounded-xl ${
                           product.id === "ren3" 
                             ? "bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-lg shadow-gray-500/5" 
                             : "border border-gray-100 shadow-sm bg-white"
@@ -246,13 +246,13 @@ const ProductDetail = () => {
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         whileHover={
                           product.id === "ren3" 
-                            ? { y: -8, boxShadow: "0 15px 30px -10px rgba(75, 75, 75, 0.2)" } 
+                            ? { y: -5, boxShadow: "0 15px 30px -10px rgba(75, 75, 75, 0.2)" } 
                             : {}
                         }
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ 
                           duration: 0.5, 
-                          delay: index * 0.1,
+                          delay: Math.min(index * 0.1, 0.4),
                           type: "spring",
                           stiffness: 80
                         }}
@@ -263,29 +263,29 @@ const ProductDetail = () => {
                         )}
                         
                         {/* Feature Number */}
-                        <div className="mr-5 mt-1">
-                          <div className={`w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform ${
+                        <div className="mr-3 md:mr-5 mt-1">
+                          <div className={`w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform ${
                             product.id === "ren3" 
                               ? "bg-gradient-to-br from-gray-800 to-gray-600 text-white shadow-lg shadow-gray-500/30" 
                               : "bg-primary/10 text-primary"
                           }`}>
-                            <span className="font-bold text-xl">{index + 1}</span>
+                            <span className="font-bold text-base md:text-xl">{index + 1}</span>
                           </div>
                         </div>
                         
                         {/* Feature Content */}
                         <div>
-                          <h3 className="text-xl font-bold mb-3 group-hover:text-gray-700 transition-colors">
+                          <h3 className="text-base md:text-xl font-bold mb-2 md:mb-3 group-hover:text-gray-700 transition-colors pr-2">
                             {feature}
                           </h3>
                           
                           {/* Underline for Ren3 */}
                           {product.id === "ren3" && (
                             <motion.div 
-                              className="w-16 h-0.5 bg-gradient-to-r from-gray-700/80 to-gray-500/20 mb-4"
+                              className="w-12 md:w-16 h-0.5 bg-gradient-to-r from-gray-700/80 to-gray-500/20 mb-2 md:mb-4"
                               initial={{ width: 0 }}
-                              whileInView={{ width: "4rem" }}
-                              transition={{ delay: index * 0.1 + 0.3, duration: 0.6 }}
+                              whileInView={{ width: "3rem" }}
+                              transition={{ delay: Math.min(index * 0.1 + 0.3, 0.6), duration: 0.6 }}
                             />
                           )}
                           
@@ -305,40 +305,40 @@ const ProductDetail = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="mt-16"
+                className="mt-8 md:mt-16"
               >
-                <h2 className="text-3xl font-bold mb-3 text-center">
+                <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-3 text-center">
                   Business Benefits
                 </h2>
-                <p className="text-gray-600 text-center mb-10">
+                <p className="text-sm md:text-base text-gray-600 text-center mb-6 md:mb-10 px-2">
                   How {product.title} delivers value to your organization
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
                   {product.benefits.map((benefit, index) => (
                     <motion.div
                       key={index}
-                      className={`${product.id === "ren3" ? "bg-gradient-to-br from-white to-gray-50 border border-gray-100" : "bg-gray-50"} p-6 rounded-lg text-center shadow-sm hover:shadow-md transition-all`}
+                      className={`${product.id === "ren3" ? "bg-gradient-to-br from-white to-gray-50 border border-gray-100" : "bg-gray-50"} p-3 md:p-6 rounded-lg text-center shadow-sm hover:shadow-md transition-all`}
                       initial={{ opacity: 0, y: 30, scale: 0.95 }}
                       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                      whileHover={product.id === "ren3" ? { y: -7, scale: 1.02 } : {}}
+                      whileHover={product.id === "ren3" ? { y: -5, scale: 1.02 } : {}}
                       viewport={{ once: true, margin: "-40px" }}
                       transition={{ 
                         duration: 0.5, 
-                        delay: Math.min(index * 0.08, 0.5),
+                        delay: Math.min(index * 0.08, 0.3),
                         type: "spring",
                         stiffness: 80
                       }}
                     >
                       {product.id === "ren3" && (
                         <motion.div 
-                          className="w-12 h-1 bg-gray-600/50 mx-auto mb-4"
+                          className="w-8 md:w-12 h-1 bg-gray-600/50 mx-auto mb-2 md:mb-4"
                           initial={{ width: 0, opacity: 0 }}
-                          whileInView={{ width: "3rem", opacity: 1 }}
-                          transition={{ delay: index * 0.08 + 0.3, duration: 0.6 }}
+                          whileInView={{ width: "2rem", opacity: 1 }}
+                          transition={{ delay: Math.min(index * 0.08 + 0.2, 0.5), duration: 0.6 }}
                         />
                       )}
-                      <p className="text-gray-800 font-medium">{benefit}</p>
+                      <p className="text-gray-800 font-medium text-xs md:text-sm">{benefit}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -396,7 +396,7 @@ const ProductDetail = () => {
       
       {/* Call to Action section for Ren3 */}
       {product.id === "ren3" && (
-        <section className="py-20 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 text-white">
+        <section className="py-12 md:py-20 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -405,14 +405,14 @@ const ProductDetail = () => {
               transition={{ duration: 0.7 }}
               className="max-w-5xl mx-auto text-center"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 px-2">
                 Find out how we can help you get started with your Enterprise AI journey
               </h2>
-              <p className="text-lg text-white/80 mb-10 max-w-3xl mx-auto">
+              <p className="text-base md:text-lg text-white/80 mb-6 md:mb-10 max-w-3xl mx-auto px-2">
                 Our team of AI experts and cloud architects are ready to guide your organization through the adoption of enterprise-grade AI solutions, custom-tailored to your business needs.
               </p>
               
-              <div className="flex flex-wrap gap-5 justify-center mt-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6 md:mt-8">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
@@ -421,11 +421,11 @@ const ProductDetail = () => {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="bg-white text-gray-700 hover:bg-neutral-100 font-medium"
+                    className="bg-white text-gray-700 hover:bg-neutral-100 font-medium w-full sm:w-auto"
                     asChild
                   >
                     <Link href="/">
-                      <span className="flex items-center gap-2">
+                      <span className="flex items-center gap-2 justify-center">
                         Back to Home
                         <ArrowLeft size={16} />
                       </span>
@@ -437,14 +437,15 @@ const ProductDetail = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: "spring", stiffness: 400 }}
+                  className="w-full sm:w-auto"
                 >
                   <Button
                     size="lg"
                     variant="outline"
-                    className="bg-white text-gray-700 hover:bg-neutral-100 font-medium"
+                    className="bg-white text-gray-700 hover:bg-neutral-100 font-medium w-full sm:w-auto"
                     onClick={handleDownloadBrochure}
                   >
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-2 justify-center">
                       Download Brochure
                       <Download size={16} />
                     </span>

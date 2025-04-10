@@ -79,6 +79,14 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-700 mb-1">Phone</h4>
+                      <motion.a
+                        href="#"
+                        className="text-gray-600 text-sm hover:text-primary transition-colors"
+                        whileHover={{ x: 5 }}
+                        transition={{ type: "spring", stiffness: 400 }}
+                      >
+                        03-5124 7818
+                      </motion.a>
                     </div>
                   </motion.div>
                   
@@ -94,6 +102,14 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-700 mb-1">Email</h4>
+                      <motion.a
+                        href="#"
+                        className="text-gray-600 text-sm hover:text-primary transition-colors"
+                        whileHover={{ x: 5 }}
+                        transition={{ type: "spring", stiffness: 400 }}
+                      >
+                        sales@virtuosity-global.com
+                      </motion.a>
                     </div>
                   </motion.div>
                 </div>

@@ -68,20 +68,20 @@ const Ren3VideoSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-8 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10"
+          className="text-center mb-6 md:mb-10"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">
             Experience ReN3 in Action
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gray-700 to-gray-500 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <div className="w-20 md:w-24 h-1 bg-gradient-to-r from-gray-700 to-gray-500 mx-auto mb-3 md:mb-6"></div>
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-2">
             See how ReN3 transforms the way businesses interact with AI through a seamless,
             secure, and intelligent platform.
           </p>
@@ -96,6 +96,8 @@ const Ren3VideoSection = () => {
             className="relative rounded-xl shadow-2xl overflow-hidden group"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
+            onTouchStart={() => setIsHovering(true)} // For mobile touch
+            onTouchEnd={() => setTimeout(() => setIsHovering(false), 3000)} // Hide controls after 3s on mobile
           >
             {/* Highlight border for video */}
             <div className="absolute -inset-[2px] bg-gradient-to-r from-gray-700/60 via-gray-500/20 to-gray-700/60 rounded-xl z-0 opacity-70"></div>
@@ -110,6 +112,7 @@ const Ren3VideoSection = () => {
                 playsInline
                 onTimeUpdate={handleTimeUpdate}
                 onEnded={() => setIsPlaying(false)}
+                poster="https://i.imghippo.com/files/oeF5911RXI.png" // Add a poster image for better mobile experience
               />
 
               {/* Video controls overlay */}
@@ -118,13 +121,13 @@ const Ren3VideoSection = () => {
                   isHovering || !isPlaying ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <div className="absolute bottom-0 left-0 right-0 p-4 flex items-center">
+                <div className="absolute bottom-0 left-0 right-0 p-2 md:p-4 flex items-center">
                   {/* Play/Pause Button */}
                   <button
                     onClick={togglePlay}
-                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white mr-3 hover:bg-white/30 transition-colors"
+                    className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white mr-2 md:mr-3 hover:bg-white/30 transition-colors"
                   >
-                    {isPlaying ? <Pause size={18} /> : <Play size={18} />}
+                    {isPlaying ? <Pause size={16} className="md:size-18" /> : <Play size={16} className="md:size-18" />}
                   </button>
                   
                   {/* Progress Bar */}
@@ -138,9 +141,9 @@ const Ren3VideoSection = () => {
                   {/* Volume Toggle */}
                   <button
                     onClick={toggleMute}
-                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white ml-3 hover:bg-white/30 transition-colors"
+                    className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white ml-2 md:ml-3 hover:bg-white/30 transition-colors"
                   >
-                    {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+                    {isMuted ? <VolumeX size={16} className="md:size-18" /> : <Volume2 size={16} className="md:size-18" />}
                   </button>
                 </div>
               </div>
@@ -152,9 +155,9 @@ const Ren3VideoSection = () => {
                     onClick={togglePlay}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-20 h-20 rounded-full bg-gradient-to-r from-gray-800 to-gray-600 flex items-center justify-center text-white"
+                    className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-gradient-to-r from-gray-800 to-gray-600 flex items-center justify-center text-white"
                   >
-                    <Play size={36} className="ml-2" />
+                    <Play size={24} className="ml-1 md:ml-2 md:size-36" />
                   </motion.button>
                 </div>
               )}
