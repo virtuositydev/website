@@ -80,7 +80,7 @@ const ContactSection = () => {
                     <div>
                       <h4 className="font-medium text-gray-700 mb-1">Phone</h4>
                       <motion.a
-                        href="#"
+                        href="/#contact"
                         className="text-gray-600 text-sm hover:text-primary transition-colors"
                         whileHover={{ x: 5 }}
                         transition={{ type: "spring", stiffness: 400 }}
@@ -103,7 +103,7 @@ const ContactSection = () => {
                     <div>
                       <h4 className="font-medium text-gray-700 mb-1">Email</h4>
                       <motion.a
-                        href="#"
+                        href="/#contact"
                         className="text-gray-600 text-sm hover:text-primary transition-colors"
                         whileHover={{ x: 5 }}
                         transition={{ type: "spring", stiffness: 400 }}
