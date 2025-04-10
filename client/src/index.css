@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 354 100% 39%;     /* #C5000D */
+    --secondary: 0 0% 10%;       /* #1A1A1A */
+    --background: 0 0% 100%;     /* #FFFFFF */
+    --ren3-dark: 0 0% 20%;       /* #333333 - Dark grey for Ren3 replacing purple */
+    --ren3-mid: 0 0% 30%;        /* #4D4D4D - Mid grey for Ren3 gradients */
+    --ren3-light: 0 0% 40%;      /* #666666 - Light grey for Ren3 gradients */
+    --font-sans: Arial, sans-serif;
+  }
+  
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-size: 15px; /* Base font size reduced from default 16px */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 { @apply text-3xl font-bold; } /* Reduced from text-4xl */
+  h2 { @apply text-2xl font-bold; } /* Reduced from text-3xl */
+  h3 { @apply text-xl font-bold; }  /* Reduced from text-2xl */
+  h4 { @apply text-lg font-bold; }  
+  
+  p { @apply text-base; }  /* text-base is typically 1rem or 15px with our adjustment */
+  
+  .text-sm { font-size: 0.875rem; }
+  
+  .bg-secondary {
+    background-color: #1A1A1A;
+    color: white;
+  }
+  
+  .text-secondary {
+    color: #1A1A1A;
+  }
+  
+  .text-ren3 {
+    color: hsl(var(--ren3-dark));
+  }
+  
+  .bg-ren3 {
+    background-color: hsl(var(--ren3-dark));
+  }
+  
+  .border-ren3 {
+    border-color: hsl(var(--ren3-dark));
+  }
+  
+  .bg-ren3-gradient {
+    background-image: linear-gradient(to bottom right, hsl(var(--ren3-dark)), hsl(var(--ren3-mid)), hsl(var(--ren3-light)));
+  }
+
+  .bg-grid-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px) translateX(0px);
+    }
+    25% {
+      transform: translateY(-5px) translateX(3px);
+    }
+    50% {
+      transform: translateY(0px) translateX(5px);
+    }
+    75% {
+      transform: translateY(5px) translateX(3px);
+    }
+    100% {
+      transform: translateY(0px) translateX(0px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+}

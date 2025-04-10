@@ -1,0 +1,33 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#1a1a2e"/>
+  <rect x="100" y="100" width="600" height="400" rx="15" fill="#293045"/>
+  <text x="400" y="200" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">Agentic Workflows</text>
+  <text x="400" y="250" font-family="Arial" font-size="18" fill="#a0a0c0" text-anchor="middle">AI agents that autonomously perform complex tasks</text>
+  
+  <!-- Flow chart connecting nodes -->
+  <circle cx="220" cy="350" r="40" fill="#6C63FF"/>
+  <text x="220" y="355" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Task 1</text>
+  
+  <line x1="260" y1="350" x2="310" y2="350" stroke="#f5f5f5" stroke-width="3" stroke-dasharray="5,5"/>
+  <polygon points="310,345 320,350 310,355" fill="#f5f5f5"/>
+  
+  <circle cx="360" cy="350" r="40" fill="#6C63FF"/>
+  <text x="360" y="355" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Task 2</text>
+  
+  <line x1="400" y1="350" x2="450" y2="350" stroke="#f5f5f5" stroke-width="3" stroke-dasharray="5,5"/>
+  <polygon points="450,345 460,350 450,355" fill="#f5f5f5"/>
+  
+  <circle cx="500" cy="350" r="40" fill="#6C63FF"/>
+  <text x="500" y="355" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Task 3</text>
+  
+  <line x1="540" y1="350" x2="590" y2="350" stroke="#f5f5f5" stroke-width="3" stroke-dasharray="5,5"/>
+  <polygon points="590,345 600,350 590,355" fill="#f5f5f5"/>
+  
+  <!-- Agent icon -->
+  <circle cx="400" cy="450" r="30" fill="#41416b"/>
+  <text x="400" y="455" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">AI</text>
+  
+  <path d="M400,420 L400,380" stroke="#f5f5f5" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M400,420 L220,390" stroke="#f5f5f5" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M400,420 L500,390" stroke="#f5f5f5" stroke-width="2" stroke-dasharray="5,5"/>
+</svg>
