@@ -188,7 +188,7 @@ const ProductDetail = () => {
 
       {/* Features Section */}
       <section className="py-8 md:py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-2 sm:px-4">
           <div className="max-w-5xl mx-auto">
             {/* Key Features */}
             <div className="mb-8 md:mb-12">
@@ -233,11 +233,11 @@ const ProductDetail = () => {
 
                 {/* Feature Cards */}
                 {product.features && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-4 md:mt-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8 mt-4 md:mt-8">
                     {product.features.map((feature, index) => (
                       <motion.div
                         key={index}
-                        className={`flex items-start p-4 md:p-6 rounded-lg md:rounded-xl ${
+                        className={`flex items-start p-3 md:p-6 rounded-lg md:rounded-xl ${
                           product.id === "ren3" 
                             ? "bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-lg shadow-gray-500/5" 
                             : "border border-gray-100 shadow-sm bg-white"
@@ -263,28 +263,28 @@ const ProductDetail = () => {
                         )}
                         
                         {/* Feature Number */}
-                        <div className="mr-3 md:mr-5 mt-1">
-                          <div className={`w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform ${
+                        <div className="mr-2 md:mr-5 mt-1 flex-shrink-0">
+                          <div className={`w-8 h-8 md:w-14 md:h-14 rounded-lg md:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform ${
                             product.id === "ren3" 
                               ? "bg-gradient-to-br from-gray-800 to-gray-600 text-white shadow-lg shadow-gray-500/30" 
                               : "bg-primary/10 text-primary"
                           }`}>
-                            <span className="font-bold text-base md:text-xl">{index + 1}</span>
+                            <span className="font-bold text-sm md:text-xl">{index + 1}</span>
                           </div>
                         </div>
                         
                         {/* Feature Content */}
-                        <div>
-                          <h3 className="text-base md:text-xl font-bold mb-2 md:mb-3 group-hover:text-gray-700 transition-colors pr-2">
+                        <div className="min-w-0 flex-1">
+                          <h3 className="text-sm sm:text-base md:text-xl font-bold mb-1 md:mb-3 group-hover:text-gray-700 transition-colors pr-1 line-clamp-2 md:line-clamp-none">
                             {feature}
                           </h3>
                           
                           {/* Underline for Ren3 */}
                           {product.id === "ren3" && (
                             <motion.div 
-                              className="w-12 md:w-16 h-0.5 bg-gradient-to-r from-gray-700/80 to-gray-500/20 mb-2 md:mb-4"
+                              className="w-10 md:w-16 h-0.5 bg-gradient-to-r from-gray-700/80 to-gray-500/20 mb-1 md:mb-4"
                               initial={{ width: 0 }}
-                              whileInView={{ width: "3rem" }}
+                              whileInView={{ width: "2.5rem" }}
                               transition={{ delay: Math.min(index * 0.1 + 0.3, 0.6), duration: 0.6 }}
                             />
                           )}
@@ -314,11 +314,11 @@ const ProductDetail = () => {
                   How {product.title} delivers value to your organization
                 </p>
 
-                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
                   {product.benefits.map((benefit, index) => (
                     <motion.div
                       key={index}
-                      className={`${product.id === "ren3" ? "bg-gradient-to-br from-white to-gray-50 border border-gray-100" : "bg-gray-50"} p-3 md:p-6 rounded-lg text-center shadow-sm hover:shadow-md transition-all`}
+                      className={`${product.id === "ren3" ? "bg-gradient-to-br from-white to-gray-50 border border-gray-100" : "bg-gray-50"} p-2 md:p-6 rounded-lg text-center shadow-sm hover:shadow-md transition-all`}
                       initial={{ opacity: 0, y: 30, scale: 0.95 }}
                       whileInView={{ opacity: 1, y: 0, scale: 1 }}
                       whileHover={product.id === "ren3" ? { y: -5, scale: 1.02 } : {}}
@@ -332,13 +332,13 @@ const ProductDetail = () => {
                     >
                       {product.id === "ren3" && (
                         <motion.div 
-                          className="w-8 md:w-12 h-1 bg-gray-600/50 mx-auto mb-2 md:mb-4"
+                          className="w-6 md:w-12 h-1 bg-gray-600/50 mx-auto mb-1 md:mb-4"
                           initial={{ width: 0, opacity: 0 }}
-                          whileInView={{ width: "2rem", opacity: 1 }}
+                          whileInView={{ width: "1.5rem", opacity: 1 }}
                           transition={{ delay: Math.min(index * 0.08 + 0.2, 0.5), duration: 0.6 }}
                         />
                       )}
-                      <p className="text-gray-800 font-medium text-xs md:text-sm">{benefit}</p>
+                      <p className="text-gray-800 font-medium text-[10px] sm:text-xs md:text-sm leading-tight">{benefit}</p>
                     </motion.div>
                   ))}
                 </div>

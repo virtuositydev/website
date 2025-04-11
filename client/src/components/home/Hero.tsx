@@ -88,7 +88,7 @@ const Hero = () => {
         >
           <span className="inline-block">Boost Productivity.</span>
           <br />
-          <span className="inline-block mt-1 text-white">Empower with AI.</span>
+          <span className="inline-block mt-1 text-white">Empowered by AI.</span>
         </motion.h1>
 
         <motion.p
