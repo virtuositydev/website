@@ -140,26 +140,6 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
     }
   };
 
-  // Get more vibrant color for feature checkmarks
-  const getFeatureCheckColor = (id: string) => {
-    switch (id) {
-      case "hybrid-cloud":
-        // Light turquoise (first color in palette)
-        return "bg-[#7DD3D1]/20 text-[#287271]";
-      case "devops":
-        // Teal (second color in palette)
-        return "bg-[#287271]/20 text-[#287271]";
-      case "microservices":
-        // Red (third color in palette)
-        return "bg-[#94180E]/20 text-[#94180E]";
-      case "ai":
-        // Coral (fourth color in palette)
-        return "bg-[#F58059]/20 text-[#F58059]";
-      default:
-        return "bg-primary/10 text-primary";
-    }
-  };
-
   // Get the appropriate icon for the service
   const getServiceIcon = (id: string) => {
     return serviceIcons[id] || serviceIcons["hybrid-cloud"];
@@ -179,13 +159,13 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
     >
       <Card className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full border-none">
         <div
-          className={`h-2 w-full bg-gradient-to-r ${getGradientClass(service.id)}`}
+          className={h-2 w-full bg-gradient-to-r ${getGradientClass(service.id)}}
         ></div>
         <CardContent className="p-0">
           {/* Card Header with Icon */}
           <div className="px-4 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4 flex items-start gap-3 sm:gap-4">
             <div
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center ${getIconColorClass(service.id)}`}
+              className={w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center ${getIconColorClass(service.id)}}
             >
               {getServiceIcon(service.id)}
             </div>
@@ -235,13 +215,14 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
                         rel="noopener noreferrer"
                         className="block w-full text-center"
                       >
-                        <div className="w-full aspect-square max-w-[3rem] mx-auto bg-white rounded-md shadow-sm hover:shadow-md transition-shadow flex items-center justify-center p-1.5">
-                          <img
-                            src={tech.logoUrl || ""}
-                            alt={tech.name}
-                            className="max-w-full max-h-full object-contain"
-                          />
-                        </div>
+                      <div className="w-full aspect-square max-w-[3rem] mx-auto bg-white rounded-md shadow-sm hover:shadow-md transition-shadow flex items-center justify-center p-1.5">
+                        <img
+                          src={tech.logoUrl || ""}
+                          alt={tech.name}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      </div>
+
                       </a>
                     </motion.div>
                   ))}
@@ -315,9 +296,7 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.1 + i * 0.05, duration: 0.3 }}
                       >
-                        <div
-                          className={`min-w-4 w-4 h-4 sm:min-w-5 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5 ${getFeatureCheckColor(service.id)}`}
-                        >
+                        <div className="min-w-4 w-4 h-4 sm:min-w-5 sm:w-5 sm:h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mt-0.5">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="10"
@@ -374,4 +353,4 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
   );
 };
 
-export default ServiceCard;
+export default ServiceCard;
