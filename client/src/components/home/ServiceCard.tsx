@@ -197,17 +197,17 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.4 }}
           >
-            <div className="rounded-xl bg-gray-50/80 p-4 sm:p-5 border border-gray-200 shadow-inner overflow-hidden">
+            <div className="rounded-xl bg-gray-50/80 p-4 sm:p-5 border border-gray-100 shadow-inner overflow-hidden">
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 justify-items-center">
                 {service.technologies &&
                   service.technologies.map((tech, i) => (
                                           <motion.div
                       key={i}
-                      className="flex flex-col items-center w-[75px] sm:w-[90px]"
+                      className="flex flex-col items-center w-[70px] sm:w-[85px]"
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3, delay: (i % 8) * 0.05 }}
-                      whileHover={{ scale: 1.15, y: -3 }}
+                      whileHover={{ scale: 1.12, y: -2 }}
                     >
                       <a
                         href={tech.url}
@@ -215,11 +215,11 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
                         rel="noopener noreferrer"
                         className="block w-full text-center"
                       >
-                      <div className="w-full aspect-square max-w-[4.5rem] mx-auto bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 transition-all duration-300 flex items-center justify-center p-2.5">
+                      <div className="w-full aspect-square max-w-[4rem] mx-auto bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 transition-all duration-300 flex items-center justify-center p-2">
                         <img
                           src={tech.logoUrl || ""}
                           alt={tech.name}
-                          className="max-w-full max-h-full object-contain"
+                          className="w-full h-full scale-125 object-contain"
                         />
                       </div>
 

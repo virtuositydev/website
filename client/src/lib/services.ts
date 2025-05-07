@@ -212,7 +212,7 @@ export const services: Service[] = [
     id: "ai",
     title: "AI Solutions",
     description:
-      "Enhance productivity with secure, multi-modal AI agents with RAG capabilities",
+      "Enhance productivity with secure, multi-modal AI agents with built-in RAG capabilities",
     image: "https://i.ibb.co/nNxbn340/ai-tools-logo.png",
     features: [
       "Multi-modal AI agents",
