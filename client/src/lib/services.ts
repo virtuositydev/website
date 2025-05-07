@@ -33,6 +33,12 @@ export const services: Service[] = [
     ],
     technologies: [
       {
+        name: "VMware",
+        url: "https://www.vmware.com/",
+        logoUrl:
+          "https://cdn.freebiesupply.com/images/large/2x/vmware-logo-black.png",
+      },
+      {
         name: "Docker",
         url: "https://www.docker.com/",
         logoUrl:
@@ -43,12 +49,6 @@ export const services: Service[] = [
         url: "https://kubernetes.io/",
         logoUrl:
           "https://pbs.twimg.com/profile_images/511909265720614913/21_d3cvM_400x400.png",
-      },
-      {
-        name: "VMware",
-        url: "https://www.vmware.com/",
-        logoUrl:
-          "https://images.seeklogo.com/logo-png/50/2/vmware-by-broadcom-logo-png_seeklogo-508529.png",
       },
       {
         name: "OpenShift",
