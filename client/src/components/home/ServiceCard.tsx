@@ -159,13 +159,13 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
     >
       <Card className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full border-none">
         <div
-          className={h-2 w-full bg-gradient-to-r ${getGradientClass(service.id)}}
+          className={`h-2 w-full bg-gradient-to-r ${getGradientClass(service.id)}`}
         ></div>
         <CardContent className="p-0">
           {/* Card Header with Icon */}
           <div className="px-4 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4 flex items-start gap-3 sm:gap-4">
             <div
-              className={w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center ${getIconColorClass(service.id)}}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center ${getIconColorClass(service.id)}`}
             >
               {getServiceIcon(service.id)}
             </div>
@@ -353,4 +353,4 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
   );
 };
 
-export default ServiceCard;
+export default ServiceCard;
