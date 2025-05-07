@@ -53,7 +53,7 @@ export const services: Service[] = [
       {
         name: "OpenShift",
         url: "https://www.redhat.com/en/technologies/cloud-computing/openshift",
-        logoUrl: "https://cdn.worldvectorlogo.com/logos/openshift.svg",
+        logoUrl: "https://www.svgrepo.com/show/354273/redhat-icon.svg",
       },
       {
         name: "Azure",
@@ -108,7 +108,7 @@ export const services: Service[] = [
       {
         name: "Red Hat OpenShift Pipelines",
         url: "https://www.redhat.com/en/topics/devops/what-cicd-pipeline",
-        logoUrl: "https://en.m.wikipedia.org/wiki/File:Red_Hat_logo.svg",
+        logoUrl: "https://www.svgrepo.com/show/354273/redhat-icon.svg",
       },
       {
         name: "Ansible",
