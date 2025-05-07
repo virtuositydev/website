@@ -108,7 +108,7 @@ export const services: Service[] = [
       {
         name: "Red Hat OpenShift Pipelines",
         url: "https://www.redhat.com/en/topics/devops/what-cicd-pipeline",
-        logoUrl: "https://cdn.worldvectorlogo.com/logos/openshift.svg",
+        logoUrl: "https://en.m.wikipedia.org/wiki/File:Red_Hat_logo.svg",
       },
       {
         name: "Ansible",
