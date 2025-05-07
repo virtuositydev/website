@@ -203,11 +203,11 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
                   service.technologies.map((tech, i) => (
                                           <motion.div
                       key={i}
-                      className="flex flex-col items-center w-[70px] sm:w-[85px]"
+                      className="flex flex-col items-center w-[75px] sm:w-[90px]"
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3, delay: (i % 8) * 0.05 }}
-                      whileHover={{ scale: 1.12, y: -2 }}
+                      whileHover={{ scale: 1.15, y: -3 }}
                     >
                       <a
                         href={tech.url}
@@ -215,7 +215,7 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
                         rel="noopener noreferrer"
                         className="block w-full text-center"
                       >
-                      <div className="w-full aspect-square max-w-[4rem] mx-auto bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 transition-all duration-300 flex items-center justify-center p-2.5">
+                      <div className="w-full aspect-square max-w-[4.5rem] mx-auto bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 transition-all duration-300 flex items-center justify-center p-2.5">
                         <img
                           src={tech.logoUrl || ""}
                           alt={tech.name}
