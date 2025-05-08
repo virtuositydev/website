@@ -190,43 +190,47 @@ const ServiceCard = ({ service, index = 0 }: ServiceCardProps) => {
             </div>
           </div>
 
-          {/* Technology Logos */}
+          {/* Technology Logos - Limited Display */}
           <motion.div
-            className="px-4 sm:px-6 py-4 border-t border-gray-100"
+            className="px-3 py-4 sm:px-4 sm:py-5 md:px-6 md:py-6 border-t border-gray-100"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.4 }}
           >
-            <div className="rounded-xl bg-gray-50/80 p-4 sm:p-5 border border-gray-100 shadow-inner overflow-hidden">
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 justify-items-center">
+            <div className="bg-white rounded-xl p-4 shadow-sm">
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-5 lg:gap-6">
                 {service.technologies &&
-                  service.technologies.map((tech, i) => (
-                                          <motion.div
+                  service.technologies.slice(0, isExpanded ? service.technologies.length : 8).map((tech, i) => (
+                    <motion.div
                       key={i}
-                      className="flex flex-col items-center w-[70px] sm:w-[85px]"
+                      className="flex flex-col items-center"
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3, delay: (i % 8) * 0.05 }}
-                      whileHover={{ scale: 1.12, y: -2 }}
+                      whileHover={{ scale: 1.08, y: -2 }}
                     >
                       <a
                         href={tech.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block w-full text-center"
+                        className="flex flex-col items-center group"
+                        aria-label={tech.name}
                       >
-                      <div className="w-full aspect-square max-w-[4rem] mx-auto bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 transition-all duration-300 flex items-center justify-center p-2">
-                        <img
-                          src={tech.logoUrl || ""}
-                          alt={tech.name}
-                          className="w-full h-full scale-125 object-contain"
-                        />
-                      </div>
-
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-white rounded-lg border border-gray-100 shadow-sm group-hover:shadow-md transition-all duration-300">
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 relative flex items-center justify-center">
+                            <img
+                              src={tech.logoUrl || ""}
+                              alt={tech.name}
+                              className="max-w-full max-h-full scale-125 object-contain"
+                              loading="lazy"
+                            />
+                          </div>
+                        </div>
                       </a>
                     </motion.div>
                   ))}
               </div>
+              
             </div>
           </motion.div>
 

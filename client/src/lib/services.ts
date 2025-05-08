@@ -36,7 +36,7 @@ export const services: Service[] = [
         name: "VMware",
         url: "https://www.vmware.com/",
         logoUrl:
-          "https://cdn.freebiesupply.com/images/large/2x/vmware-logo-black.png",
+          "https://logos-world.net/wp-content/uploads/2022/03/VMware-Symbol.png",
       },
       {
         name: "Docker",
@@ -65,7 +65,7 @@ export const services: Service[] = [
         name: "Rancher",
         url: "https://www.rancher.com",
         logoUrl:
-          "https://www.ibm.com/content/dam/adobe-cms/instana/media_logo/Rancher.component.complex-narrative-xl.ts=1691083019889.png/content/adobe-cms/us/en/products/instana/supported-technologies/rancher-monitoring/_jcr_content/root/table_of_contents/body/content_section_styled/content-section-body/complex_narrative/logoimage",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbsJqlU363OP5RRMTNRKPOUuqPhCU_fwX2_w&s",
       },
       {
         name: "AliCloud",
@@ -106,11 +106,6 @@ export const services: Service[] = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png",
       },
       {
-        name: "Red Hat OpenShift Pipelines",
-        url: "https://www.redhat.com/en/topics/devops/what-cicd-pipeline",
-        logoUrl: "https://www.svgrepo.com/show/354273/redhat-icon.svg",
-      },
-      {
         name: "Ansible",
         url: "https://www.ansible.com/",
         logoUrl: "https://cdn.worldvectorlogo.com/logos/ansible.svg",
@@ -131,13 +126,13 @@ export const services: Service[] = [
       {
         name: "FluentBit",
         url: "https://fluentbit.io/",
-        logoUrl: "https://dt-cdn.net/hub/logos/fluent-bit.png",
+        logoUrl: "https://wayha-sokxay.tech/assets/fluentbit-06731f05.webp",
       },
       {
         name: "SonarQube",
         url: "https://www.sonarqube.org/",
         logoUrl:
-          "https://miro.medium.com/v2/resize:fit:1400/1*AuJEZBUtH4XXU1WSbQIImA.png",
+          "https://wcdn.pvs-studio.com/static/images/logo/sonar_qube.png",
       },
       {
         name: "Grafana",
@@ -151,6 +146,11 @@ export const services: Service[] = [
         url: "https://www.elastic.co/elasticsearch",
         logoUrl:
           "https://marketplace-assets.digitalocean.com/logos/elasticsearch.png",
+      },
+      {
+        name: "Red Hat OpenShift Pipelines",
+        url: "https://www.redhat.com/en/topics/devops/what-cicd-pipeline",
+        logoUrl: "https://www.svgrepo.com/show/354273/redhat-icon.svg",
       },
     ],
   },
@@ -204,7 +204,7 @@ export const services: Service[] = [
       {
         name: "Hasura",
         url: "https://hasura.io/",
-        logoUrl: "https://avatars.githubusercontent.com/u/13966722?s=200&v=4",
+        logoUrl: "https://images.hasgeek.com/embed/file/e113114163b44a55a1c78f187d54768c?size=250",
       },
     ],
   },
@@ -224,7 +224,12 @@ export const services: Service[] = [
       {
         name: "ReN3.ai",
         url: "https://ren3.ai/",
-        logoUrl: "https://i.imghippo.com/files/oeF5911RXI.png",
+        logoUrl: "https://www.imda.gov.sg/-/media/imda/images/content/for-industry/technology-and-innovation/innovative-tech-companies/sgd-spark/ren3-logo.jpg",
+      },
+      {
+        name: "Ollama",
+        url: "https://ollama.com",
+        logoUrl: "https://ollama.com/public/ollama.png",
       },
       {
         name: "OpenAI",
